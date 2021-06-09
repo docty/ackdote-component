@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "description": "Ackdote package is a holder for all react packages",
   "private": true,
-  "author": "docty <sensork82@gmail.com> (http://doctycomponent.com)",
+  "author": "docty68 <createdarko@gmail.com> (http://doctycomponent.com)",
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
