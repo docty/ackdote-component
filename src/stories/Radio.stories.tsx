@@ -9,7 +9,14 @@ export default {
     component: Radio
 } as Meta;
 
-const Template: Story<IRadio>  = (args) => <Radio {...args} />;
+const Template: Story<IRadio>  = (args) => (
+    <div>
+        <Radio {...args} name={'def'}/>
+        <Radio {...args} name={'def'} />
+    </div>
+);
 
 export const RadioDefault = Template.bind({});
-
+RadioDefault.args = {
+    text : 'Default Radio'
+}

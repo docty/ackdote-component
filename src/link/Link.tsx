@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 
 
-export const Link = (props: Pick<ILink, 'text' | 'href'>) => {
-    const {text, href} = props
+export const Link = (props: Pick<ILink, 'text' | 'href' | 'style'>) => {
+    const {text, href, style} = props
     
     return (
-        <a href={href}>{text}</a>
+        <a href={href} style={style}>{text}</a>
     );
 };
 
@@ -13,4 +13,5 @@ export const Link = (props: Pick<ILink, 'text' | 'href'>) => {
 export interface ILink {
     text: string;
     href: string;
+    style?: CSSProperties;
 }

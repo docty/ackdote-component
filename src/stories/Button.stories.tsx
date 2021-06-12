@@ -8,21 +8,21 @@ import { IButton, Button } from '../button/Button';
 
 export default {
   title: 'Button',
-  argTypes: {
-    color: { control: { type: "select", options: ["undefined","primary", "secondary", "success", "dark", "light", "info", "danger", "warning", "pink"] }}
-    
-  },
+  // argTypes: {
+  //   color: { control: { type: "select", options: ["undefined","primary", "secondary", "success", "dark", "light", "info", "danger", "warning", "pink"] }}
+  // },
   component: Button
   
 } as Meta;
 
-const Template: Story<IButton>  = (args) => <Button {...args} />;
+const Template: Story<IButton>  = (args) => <Button  {...args} />;
 
 export const ButtonDefault = Template.bind({});
 ButtonDefault.args = {
   text: 'Default Button',
   fullWidth: false,
-  click : () => console.log('I am clicked')
-}
+  click : () => console.log('I am clicked'),
+  style: {backgroundColor: 'brown'}
+} as IButton
 
  

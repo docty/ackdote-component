@@ -1,36 +1,36 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import { HTMLAttributes } from 'react';
 
 
 
 export const Table = (props: ITable) => {
     return (
-        <table>
+        <table style={props.style}>
             {props.children}
         </table>
     );
 };
 
-export const TableRow = (props: Pick<HTMLAttributes<React.ReactNode>, 'children'>) => {
+export const TableRow = (props: ITable) => {
     return (
-        <tr>{props.children}</tr>
+        <tr style={props.style}>{props.children}</tr>
     );
 };
 
 
-export const TableHeader = (props: Pick<HTMLAttributes<React.ReactNode>, 'children'>) => {
+export const TableHeader = (props: ITable) => {
     return (
-        <th>{props.children}</th>
+        <th style={props.style}>{props.children}</th>
     );
 };
 
-export const TableItem = (props: Pick<HTMLAttributes<React.ReactNode>, 'children'>) => {
+export const TableItem = (props: ITable) => {
     return (
-        <td>{props.children}</td>
+        <td style={props.style}>{props.children}</td>
     );
 };
 
 
 export interface ITable extends  Pick<HTMLAttributes<React.ReactNode>, 'children'> {
-     
+    style?: CSSProperties;     
 }

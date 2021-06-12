@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import { HTMLAttributes } from 'react';
 
 
@@ -7,22 +7,23 @@ export const List = (props: IList) => {
 
     if (props.type === 'ordered') {
         return (
-            <ol>{props.children}</ol>
+            <ol style={props.style}>{props.children}</ol>
         );
     } else {
         return (
-            <ul>{props.children}</ul>
+            <ul style={props.style}>{props.children}</ul>
         );
     } 
 };
 
 
-export const ListItem = (props: Pick<HTMLAttributes<React.ReactNode>, 'children'>) => {
+export const ListItem = (props: Pick<HTMLAttributes<React.ReactNode>, 'children' | 'style'>) => {
     return (
-        <li>{props.children}</li>
+        <li style={props.style}>{props.children}</li>
     );
 };
 
 export interface IList extends Pick<HTMLAttributes<React.ReactNode>, 'children'> {
-    type: 'ordered' | 'unordered'
+    type: 'ordered' | 'unordered';
+    style?: CSSProperties;
 }

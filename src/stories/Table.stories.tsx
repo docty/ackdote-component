@@ -23,7 +23,7 @@ const Template: Story<ITable>  = (args) =>
         <TableRow>
             <TableItem>Felix</TableItem>
             <TableItem>25</TableItem>
-            <TableItem>024005123</TableItem>
+            <TableItem>0240051237</TableItem>
         </TableRow>
     </Table>;
 

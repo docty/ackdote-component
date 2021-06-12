@@ -17,5 +17,5 @@ const Template: Story<IList>  = (args) =>
         <ListItem>Nigeria</ListItem>
     </List>;
 
-export const OptionDefault = Template.bind({});
+export const ListDefault = Template.bind({});
 

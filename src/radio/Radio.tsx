@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 
 
-export const Radio = () => { 
+export const Radio = (props: IRadio) => { 
     
     return (
-        <input type="radio" />
+        <div style={props.style}>
+            <input type="radio" name={props.name} />
+            <label>{props.text}</label>
+        </div>
     );
 };
 
 
 export interface IRadio {
-     
+    style?: CSSProperties;
+    text: string;
+    name?: string;
 }

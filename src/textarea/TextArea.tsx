@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 
 
 
-export const TextArea = (props: Pick<ITextArea,  'change'>) => {
-    const { change } = props
+export const TextArea = (props: Pick<ITextArea,  'change' | 'style'>) => {
+    const { change, style } = props
     
     
     return (
-        <textarea 
+        <textarea
+            style={style} 
             onChange={change}
         ></textarea> 
             
@@ -17,4 +18,5 @@ export const TextArea = (props: Pick<ITextArea,  'change'>) => {
 
 export interface ITextArea {
     change?: () => void;
+    style?: CSSProperties;
 }

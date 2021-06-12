@@ -1,19 +1,22 @@
-import React, { HTMLAttributes, ReactNode } from 'react';
+import React, { CSSProperties, HTMLAttributes, ReactNode } from 'react';
  
 
 
 export const Option = (props: IOption) => { 
     
     return (
-        <select>
+        <select style={props.style}>
             {props.children}
         </select>
     );
 };
 
-export const OptionItem = (props: IOption) => <option>{props.children}</option>
+export const OptionItem = (props: IOption) => 
+    <option style={props.style}>
+        {props.children}
+    </option>
      
 
 export interface IOption extends Pick<HTMLAttributes<ReactNode>, 'children'> {
-     
+    style?: CSSProperties;
 }

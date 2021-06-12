@@ -14,5 +14,6 @@ const Template: Story<ILink>  = (args) => <Link {...args} />;
 export const LinkDefault = Template.bind({});
 LinkDefault.args = {
   text: 'Default Link',
-  href: '#'
-}
+  href: '#',
+  style: {textDecoration:'none'}
+} as ILink;

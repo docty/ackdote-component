@@ -13,3 +13,7 @@ const Template: Story<ICheckbox>  = (args) => <Checkbox {...args} />;
 
 export const CheckboxDefault = Template.bind({});
 
+CheckboxDefault.args = {
+    text: 'Default Checkbox',
+    click: () => console.log('Checkbox clicked')
+  } as ICheckbox

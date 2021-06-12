@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 
 
-export const Image = (props: Pick<IImage, 'alt' | 'source'>) => {
-    const { source, alt } = props
+export const Image = (props: Pick<IImage, 'alt' | 'source' | 'style'>) => {
+    const { source, alt, style } = props
     
     return (
-        <img src={source} alt={alt} />
+        <img src={source} alt={alt} style={style} />
     );
 };
 
@@ -13,4 +13,5 @@ export const Image = (props: Pick<IImage, 'alt' | 'source'>) => {
 export interface IImage {
     source: string;
     alt: string;
+    style?: CSSProperties;
 }

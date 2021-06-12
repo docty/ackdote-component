@@ -15,4 +15,4 @@ export const ImageDefault = Template.bind({});
 ImageDefault.args = {
   source: 'http://gallery/image.png',
   alt: 'Image not found'
-}
+} as IImage

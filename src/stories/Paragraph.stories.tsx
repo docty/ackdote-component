@@ -14,4 +14,4 @@ const Template: Story<IParagraph>  = (args) => <Paragraph {...args} />;
 export const ParagraphDefault = Template.bind({});
 ParagraphDefault.args = {
   text: 'Default Paragraph'
-}
+} as IParagraph;

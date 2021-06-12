@@ -9,7 +9,7 @@ export default {
     component: Heading
 } as Meta;
 
-const Template: Story<IHeading>  = (args) => <Heading {...args} />;
+const Template: Story<IHeading>  = (args) => <Heading style={{border: '2px solid red', color: 'cyan'}} {...args} />;
 
 export const HeadingDefault = Template.bind({});
 HeadingDefault.args = {
