@@ -2,7 +2,6 @@ import React from 'react';
 import './button.css'
 
 
-
 export const Button = (props: Pick<IButton, 'text'| 'fullWidth'  | 'click'>) => {
     const {text, fullWidth, click} = props
     const length = fullWidth ? '100%' : 'auto' 
@@ -14,8 +13,8 @@ export const Button = (props: Pick<IButton, 'text'| 'fullWidth'  | 'click'>) => 
             style={{width: length}} 
             className={"btn"}
             onClick={click}
-            >
-                {text}
+        >
+            {text}
         </button>
     );
 };

@@ -3,16 +3,17 @@ import { HTMLAttributes } from 'react';
 
 
 
-
-
-
-
-
 export const List = (props: IList) => {
-    const listStyle = props.bulletLess ?  'none' : '' ;
-    return (
-        <ul style={{ listStyleType: listStyle }}>{props.children}</ul>
-    );
+
+    if (props.type === 'ordered') {
+        return (
+            <ol>{props.children}</ol>
+        );
+    } else {
+        return (
+            <ul>{props.children}</ul>
+        );
+    } 
 };
 
 
@@ -22,6 +23,6 @@ export const ListItem = (props: Pick<HTMLAttributes<React.ReactNode>, 'children'
     );
 };
 
-interface IList extends Pick<HTMLAttributes<React.ReactNode>, 'children'> {
-    bulletLess?: boolean
+export interface IList extends Pick<HTMLAttributes<React.ReactNode>, 'children'> {
+    type: 'ordered' | 'unordered'
 }
