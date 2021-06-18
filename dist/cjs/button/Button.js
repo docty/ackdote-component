@@ -17,11 +17,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Button = void 0;
 var react_1 = __importDefault(require("react"));
 require("./button.css");
+require("../font-awesome.min.css");
 var Button = function (props) {
-    var text = props.text, fullWidth = props.fullWidth, style = props.style, click = props.click;
+    var text = props.text, fullWidth = props.fullWidth, style = props.style, icon = props.icon, trailing = props.trailing, click = props.click;
     var length = fullWidth ? '100%' : 'auto';
-    var cssProp = __assign(__assign({}, style), { width: length });
-    return (react_1.default.createElement("button", { type: "button", style: cssProp, className: "btn", onClick: click }, text));
+    var direction = trailing === 'left' ? 'row' : 'row-reverse';
+    var cssProp = __assign(__assign({}, style), { width: length, flexDirection: direction });
+    return (react_1.default.createElement("button", { type: "button", style: cssProp, className: 'btn', onClick: click },
+        icon && (react_1.default.createElement("i", { className: icon, style: { margin: '5px' } })),
+        react_1.default.createElement("span", null, text)));
 };
 exports.Button = Button;
 //# sourceMappingURL=Button.js.map

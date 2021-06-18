@@ -1,9 +1,12 @@
 import { CSSProperties } from 'react';
 import './button.css';
-export declare const Button: (props: Pick<IButton, 'text' | 'fullWidth' | 'click' | 'style'>) => JSX.Element;
+import '../font-awesome.min.css';
+export declare const Button: (props: IButton) => JSX.Element;
 export interface IButton {
     text: string;
     fullWidth?: boolean;
     click?: () => void;
+    icon?: string;
+    trailing?: 'left' | 'right';
     style?: CSSProperties;
 }

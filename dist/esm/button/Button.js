@@ -11,10 +11,14 @@ var __assign = (this && this.__assign) || function () {
 };
 import React from 'react';
 import './button.css';
+import '../font-awesome.min.css';
 export var Button = function (props) {
-    var text = props.text, fullWidth = props.fullWidth, style = props.style, click = props.click;
+    var text = props.text, fullWidth = props.fullWidth, style = props.style, icon = props.icon, trailing = props.trailing, click = props.click;
     var length = fullWidth ? '100%' : 'auto';
-    var cssProp = __assign(__assign({}, style), { width: length });
-    return (React.createElement("button", { type: "button", style: cssProp, className: "btn", onClick: click }, text));
+    var direction = trailing === 'left' ? 'row' : 'row-reverse';
+    var cssProp = __assign(__assign({}, style), { width: length, flexDirection: direction });
+    return (React.createElement("button", { type: "button", style: cssProp, className: 'btn', onClick: click },
+        icon && (React.createElement("i", { className: icon, style: { margin: '5px' } })),
+        React.createElement("span", null, text)));
 };
 //# sourceMappingURL=Button.js.map

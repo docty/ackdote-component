@@ -7,8 +7,12 @@ exports.TextField = void 0;
 var react_1 = __importDefault(require("react"));
 require("./textfield.css");
 var TextField = function (props) {
-    var type = props.type, placeholder = props.placeholder, style = props.style, change = props.change;
-    return (react_1.default.createElement("input", { type: type, className: "dt-input", style: style, placeholder: placeholder, onChange: change }));
+    var type = props.type, placeholder = props.placeholder, style = props.style, icon = props.icon, change = props.change;
+    return (react_1.default.createElement("div", { style: style, className: 'dt-input-wrapper' },
+        icon &&
+            react_1.default.createElement("span", { className: 'dt-input-icon' },
+                react_1.default.createElement("i", { className: icon })),
+        react_1.default.createElement("input", { type: type, className: "dt-input", placeholder: placeholder, onChange: change })));
 };
 exports.TextField = TextField;
 //# sourceMappingURL=TextField.js.map
