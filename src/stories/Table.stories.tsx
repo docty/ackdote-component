@@ -4,7 +4,7 @@ import { Meta, Story  } from '@storybook/react/types-6-0';
 import { ITable, Table, TableRow, TableHeader, TableItem } from '../table/Table';
  
 export default {
-    title: 'Table',
+    title: 'Element/Table',
     component: Table
 } as Meta;
 

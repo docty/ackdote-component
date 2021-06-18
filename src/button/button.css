@@ -6,6 +6,10 @@
   outline: none;
   border-radius: 5px;
   cursor: pointer;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn:hover {

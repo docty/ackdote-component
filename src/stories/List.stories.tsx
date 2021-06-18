@@ -5,7 +5,7 @@ import { IList, List, ListItem } from '../list/List';
  
 
 export default {
-    title: 'List',
+    title: 'Element/List',
     component: List
 } as Meta;
 

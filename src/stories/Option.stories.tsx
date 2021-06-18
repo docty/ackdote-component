@@ -5,7 +5,7 @@ import { IOption, Option, OptionItem } from '../option/Option';
  
 
 export default {
-    title: 'Option',
+    title: 'Element/Option',
     component: Option
 } as Meta;
 

@@ -5,7 +5,7 @@ import { IImage, Image  } from '../image/Image';
  
 
 export default {
-    title: 'Image',
+    title: 'Element/Image',
     component: Image
 } as Meta;
 

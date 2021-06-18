@@ -5,7 +5,7 @@ import { ILink, Link } from '../link/Link';
  
 
 export default {
-    title: 'Link',
+    title: 'Element/Link',
     component: Link
 } as Meta;
 
@@ -14,6 +14,5 @@ const Template: Story<ILink>  = (args) => <Link {...args} />;
 export const LinkDefault = Template.bind({});
 LinkDefault.args = {
   text: 'Default Link',
-  href: '#',
-  style: {textDecoration:'none'}
+  href: '#'
 } as ILink;

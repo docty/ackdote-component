@@ -1,7 +1,7 @@
 {
   "name": "@docty68/component",
-  "version": "0.1.2",
-  "description": "Ackdote package is a holder for all react packages",
+  "version": "0.1.3",
+  "description": "Docty68 package is a holder for all react packages",
   "author": "docty68 <createdarko@gmail.com> (http://doctycomponent.com)",
   "license": "MIT",
   "main": "dist/cjs/index.js",

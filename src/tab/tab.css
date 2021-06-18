@@ -1,0 +1,10 @@
+.dt-tab {
+
+}
+
+.dt-tab-header {
+    display: inline;
+    padding: 7px;
+    cursor: pointer;
+    border: 1px solid red
+}

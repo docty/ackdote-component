@@ -5,11 +5,11 @@ import { IHeading, Heading  } from '../heading/Heading';
  
 
 export default {
-    title: 'Heading',
+    title: 'Element/Heading',
     component: Heading
 } as Meta;
 
-const Template: Story<IHeading>  = (args) => <Heading style={{border: '2px solid red', color: 'cyan'}} {...args} />;
+const Template: Story<IHeading>  = (args) => <Heading {...args} />;
 
 export const HeadingDefault = Template.bind({});
 HeadingDefault.args = {

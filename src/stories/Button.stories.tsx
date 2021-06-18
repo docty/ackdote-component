@@ -3,14 +3,11 @@ import React from 'react';
 import { Meta, Story  } from '@storybook/react/types-6-0';
 import { IButton, Button } from '../button/Button';
  
-
- 
-
 export default {
-  title: 'Button',
-  // argTypes: {
-  //   color: { control: { type: "select", options: ["undefined","primary", "secondary", "success", "dark", "light", "info", "danger", "warning", "pink"] }}
-  // },
+  title: 'Element/Button',
+  argTypes: {
+    trailing: { control: { type: "select", options: ["left","right"] }}
+  },
   component: Button
   
 } as Meta;
@@ -19,10 +16,9 @@ const Template: Story<IButton>  = (args) => <Button  {...args} />;
 
 export const ButtonDefault = Template.bind({});
 ButtonDefault.args = {
-  text: 'Default Button',
+  text: 'Button',
   fullWidth: false,
-  click : () => console.log('I am clicked'),
-  style: {backgroundColor: 'brown'}
+  icon: 'fa fa-sign-in',
 } as IButton
 
  

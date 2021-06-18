@@ -5,7 +5,7 @@ import { IParagraph, Paragraph  } from '../paragraph/Paragraph';
  
 
 export default {
-    title: 'Paragraph',
+    title: 'Element/Paragraph',
     component: Paragraph
 } as Meta;
 

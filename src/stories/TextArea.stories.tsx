@@ -5,7 +5,7 @@ import { TextArea, ITextArea } from '../textarea/TextArea';
  
 
 export default {
-    title: 'TextArea',
+    title: 'Element/TextArea',
     component: TextArea
 } as Meta;
 

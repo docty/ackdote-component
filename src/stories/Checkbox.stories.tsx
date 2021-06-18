@@ -5,7 +5,7 @@ import { Checkbox, ICheckbox } from '../checkbox/Checkbox';
  
 
 export default {
-    title: 'Checkbox',
+    title: 'Element/Checkbox',
     component: Checkbox
 } as Meta;
 
@@ -14,6 +14,6 @@ const Template: Story<ICheckbox>  = (args) => <Checkbox {...args} />;
 export const CheckboxDefault = Template.bind({});
 
 CheckboxDefault.args = {
-    text: 'Default Checkbox',
+    text: 'Checkbox',
     click: () => console.log('Checkbox clicked')
   } as ICheckbox

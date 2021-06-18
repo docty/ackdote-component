@@ -5,11 +5,13 @@ import { ITextField, TextField  } from '../textfield/TextField';
  
 
 export default {
-    title: 'TextField',
+    title: 'Element/TextField',
     component: TextField
 } as Meta;
 
 const Template: Story<ITextField>  = (args) => <TextField {...args} />;
 
 export const TextFieldDefault = Template.bind({});
-
+TextFieldDefault.args = {
+    icon: 'fa fa-user'
+} as ITextField;

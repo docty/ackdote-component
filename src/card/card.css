@@ -1,0 +1,7 @@
+.dt-card {
+    min-height: 50px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 3px 1px rgb(148 148 148 / 50%);
+    border-radius: 5px;
+}

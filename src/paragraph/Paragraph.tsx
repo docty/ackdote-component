@@ -12,5 +12,5 @@ export const Paragraph = (props: Pick<IParagraph, 'text' | 'style'>) => {
 
 export interface IParagraph {
     text: string;
-    style: CSSProperties;
+    style?: CSSProperties;
 }

@@ -5,7 +5,7 @@ import { Radio, IRadio } from '../radio/Radio';
  
 
 export default {
-    title: 'Radio',
+    title: 'Element/Radio',
     component: Radio
 } as Meta;
 
@@ -18,5 +18,5 @@ const Template: Story<IRadio>  = (args) => (
 
 export const RadioDefault = Template.bind({});
 RadioDefault.args = {
-    text : 'Default Radio'
+    text : 'Radio'
 }
