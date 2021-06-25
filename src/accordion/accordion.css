@@ -1,0 +1,28 @@
+.dt-accordion {
+    border: 1px solid #000;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    background: #4e5a65;
+    color: #fff;
+    border-top: none;
+}
+
+.dt-accordion-content {
+    border: 1px solid #000;
+    padding: 10px;
+    border-top: none;
+    transition: all 5s 5s linear;
+}
+
+.dt-accordion-active {
+    display: block;
+    transition-property: all;
+    transition-delay: 0ms;
+}
+
+.dt-accordion-null {
+    display: none;
+    transition: all 5s 5s linear;
+}

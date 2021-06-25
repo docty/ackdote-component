@@ -1,0 +1,19 @@
+.dt-progressbar {
+    height: 15px;
+    background: rgb(201, 198, 198);
+    padding: 1px;
+    position: relative;
+    border-radius: 10px;
+}
+
+
+.dt-progressbar-inner {
+    display: block;
+    height: inherit;
+    background-color: orange;
+    width: 35%;
+    border-radius: 10px; 
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}

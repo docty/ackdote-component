@@ -1,0 +1,20 @@
+.dt-alert {
+    padding: 10px;
+    border: 1px solid rgb(69, 139, 219);
+    background-color: rgba(69, 139, 219, 0.5);
+    border-radius: 5px;
+    color: #fff;
+    position: relative;
+}
+
+.dt-alert span {
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.dt-alert span:hover {
+    font-size: 18px;
+    
+}
