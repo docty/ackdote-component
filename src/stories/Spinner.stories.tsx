@@ -13,5 +13,5 @@ const Template: Story<ISpinner>  = (args) => <Spinner {...args} />;
 
 export const SpinnerDefault = Template.bind({});
 SpinnerDefault.args = {
-    type: 'bar'
+    type: 'square'
 } as ISpinner;

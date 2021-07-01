@@ -1,6 +1,6 @@
 {
   "name": "@docty68/component",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Docty68 package is a holder for all react packages",
   "author": "docty68 <createdarko@gmail.com> (http://doctycomponent.com)",
   "license": "MIT",
@@ -66,7 +66,8 @@
     "@storybook/addon-links": "^6.1.10",
     "@storybook/node-logger": "^6.1.10",
     "@storybook/preset-create-react-app": "^3.1.5",
-    "@storybook/react": "^6.1.10"
+    "@storybook/react": "^6.1.10",
+    "chromatic": "^5.9.2"
   },
   "keywords": [
     "ackdote",

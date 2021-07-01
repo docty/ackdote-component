@@ -1,0 +1,82 @@
+.dt-carousel {
+    background-color: #f3f3f3;
+    height: 250px;
+    width: 400px;
+    position: relative;
+}
+
+.dt-carousel-dot {
+    position: absolute;
+    right: 40%;
+    bottom: 10px;
+    display: flex;
+    grid-gap: 5px;
+}
+
+.dt-carousel-dot > div {
+    background-color: rgb(247, 125, 247);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid rgb(207, 17, 207);
+}
+
+.dt-carousel-dot .dt-carousel-dot-active {
+    background-color: rgb(252, 227, 252);
+}
+
+.dt-carousel-content {
+    height: 100%;
+}
+
+.dt-carousel-sides {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+    font-size: 25px;
+    top: 0;
+}
+
+.dt-carousel-sides span  {
+    width: 25px;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    background: rgba(60, 58, 58,  0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    user-select: none;
+}
+
+.dt-carousel-sides span:nth-child(2) {
+    right: 0;
+}
+
+.dt-carousel-sides span:hover {
+    color:rgb(109, 151, 141);
+    font-size: 35px;
+    background: rgba(60, 58, 58,  0.7);
+}
+
+.dt-carousel-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    image-rendering: pixelated;
+}
+
+.remove {
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+}

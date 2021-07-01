@@ -1,0 +1,13 @@
+.dt-avatar {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(173, 89, 89);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dt-avatar p {
+    color: #fff;
+}
