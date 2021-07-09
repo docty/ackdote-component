@@ -3,7 +3,7 @@ import './textfield.css';
 
 
 export const TextField = (props: ITextField) => {
-    const {type, placeholder, style, icon,change} = props
+    const {type, placeholder, style, icon,change, value} = props
     
     
     return (
@@ -19,6 +19,7 @@ export const TextField = (props: ITextField) => {
                 className={"dt-input"}
                 placeholder={placeholder}
                 onChange={change}
+                value={value}
             />
         </div>
     );
@@ -28,7 +29,8 @@ export const TextField = (props: ITextField) => {
 export interface ITextField {
     type: 'text' | 'password';
     placeholder?: string;
-    change?: () => void;
+    change?: (e:any) => void;
     style?: CSSProperties;
     icon?: string;
+    value?: string;
 }

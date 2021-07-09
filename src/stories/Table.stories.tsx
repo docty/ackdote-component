@@ -11,19 +11,34 @@ export default {
 const Template: Story<ITable>  = (args) => 
     <Table {...args}>
         <TableRow>
+            <TableHeader>SN</TableHeader>
             <TableHeader>Name</TableHeader>
             <TableHeader>Age</TableHeader>
             <TableHeader>Contact</TableHeader>
         </TableRow>
         <TableRow>
+            <TableItem>1</TableItem>
             <TableItem>Henry</TableItem>
             <TableItem>30</TableItem>
             <TableItem>0201209262</TableItem>
         </TableRow>
         <TableRow>
+            <TableItem>2</TableItem>
             <TableItem>Felix</TableItem>
             <TableItem>25</TableItem>
             <TableItem>0240051237</TableItem>
+        </TableRow>
+        <TableRow>
+            <TableItem>3</TableItem>
+            <TableItem>Emmanuel</TableItem>
+            <TableItem>27</TableItem>
+            <TableItem>050474612</TableItem>
+        </TableRow>
+        <TableRow>
+            <TableItem>4</TableItem>
+            <TableItem>Gloria</TableItem>
+            <TableItem>32</TableItem>
+            <TableItem>0275087651</TableItem>
         </TableRow>
     </Table>;
 
