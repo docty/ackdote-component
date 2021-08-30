@@ -22,7 +22,7 @@ export const FlexboxDefault = Template.bind({});
 FlexboxDefault.args = {
     direction: 'row',
     alignContent: 'flex-start',
-    justifyContent: 'flex-start',
+    justifyContent: 'start',
     alignItems: 'flex-start'
 } as IFlexbox;
 

@@ -13,6 +13,6 @@ const Template: Story<IImage>  = (args) => <Image {...args} />;
 
 export const ImageDefault = Template.bind({});
 ImageDefault.args = {
-  source: 'http://gallery/image.png',
+  source: 'http://localhost:6006/category1.jpg',
   alt: 'Image not found'
 } as IImage

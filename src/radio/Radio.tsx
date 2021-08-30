@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react';
+import  { CSSProperties } from 'react';
 import './radio.css';
 
 export const Radio = (props: IRadio) => { 

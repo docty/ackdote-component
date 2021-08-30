@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, ReactNode } from 'react';
+import  { HTMLAttributes, ReactNode } from 'react';
 
 
 export const Layout = (props: Pick<ILayout, 'children' | 'style' | 'type' | 'span'>) => {

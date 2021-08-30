@@ -1,6 +1,6 @@
 import React, { Children, CSSProperties, HTMLAttributes } from 'react';
 import './accordion.css';
-
+import classnames from 'classnames';
 
 
 export const Accordion = (props: IAccordion) => { 
@@ -37,7 +37,7 @@ export const AccordionItem = (props: any) => {
 const AccordionHeader = (props: any) => {
     const res =  props.childIndex === props.selectedIndex ? 'fa fa-minus' : 'fa fa-plus';
     return (
-        <div className={'dt-accordion'} onClick={props.itemClick}>
+        <div className={headerStyling()} onClick={props.itemClick}>
             {props.element.text}
             <i className={res}></i>
         </div>
@@ -60,18 +60,11 @@ export interface IAccordion extends Pick<HTMLAttributes<React.ReactNode>, 'child
     icon?: string;
 }
 
-// export interface ITab extends Pick<HTMLAttributes<React.ReactNode>, 'children'> {
-//     style?: CSSProperties; 
-// }
 
-// interface ITabItem extends ITab {
-//     text?: string;
-//     icon?: string;
-// }
-// interface ITabHeader extends ITab {
-//     text?: string;
-//     icon?: string;
-//     clickTab: any;
-//     childIndex: number;
-//     selectedIndex: number;
-// }
+const headerStyling = () => {
+    return classnames([
+        'dt-accordion',
+        'bg-blue-300 flex justify-between p-3',
+        'cursor-pointer border'
+    ])
+}

@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react';
+import  { CSSProperties } from 'react';
 
 
 export const Paragraph = (props: Pick<IParagraph, 'text' | 'style'>) => {

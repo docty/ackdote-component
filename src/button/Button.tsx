@@ -1,35 +1,45 @@
-import React, { CSSProperties } from 'react';
-import './button.css';
 import '../font-awesome.min.css';
+import classnames from 'classnames';
+import { CSSProperties } from 'react';
 
 export const Button = (props: IButton) => {
-    const {text, fullWidth, style, icon, trailing ,click} = props
-    const length:string = fullWidth ? '100%' : 'auto';
-    const direction =  trailing === 'left' ? 'row' : 'row-reverse';
-
-    const cssProp: CSSProperties  = {...style, width: length, flexDirection: direction};
+    
+    
     
     return (
         <button 
             type="button" 
-            style={cssProp} 
-            className={'btn'}
-            onClick={click}
+            style={{color: '#fff'}}
+            className={styling(props)}
+            onClick={props.click}
         >
-            {icon &&  (<i className={icon} style={{margin: '5px'}}></i>) }
-            <span>{text}</span>
+            {props.icon &&  (<i className={props.icon} style={{margin: '5px'}}></i>) }
+            <span>{props.text}</span>
         </button>
         
     );
 };
-
+const styling = (props: IButton) => {
+    const { bgColor } = props;
+    return classnames([
+        `bg-${bgColor}-400`, 
+        'p-2 px-5 rounded-xl', 
+        `hover:bg-${bgColor}-300`
+    ]);
+} 
 
 
 export interface IButton {
+    bgColor?: 'blue' | 'green' | 'pink' | 'red',
     text: string;
     fullWidth?: boolean;
     click?: () => void;
     icon?: string;
     trailing?: 'left' | 'right';
     style?: CSSProperties ;
+}
+
+
+Button.defaultProps = {
+    bgColor: 'blue'
 }

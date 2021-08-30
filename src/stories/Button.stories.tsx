@@ -17,6 +17,7 @@ const Template: Story<IButton>  = (args) => <Button  {...args} />;
 export const ButtonDefault = Template.bind({});
 ButtonDefault.args = {
   text: 'Button',
+  bgColor: 'blue',
   fullWidth: false,
   icon: 'fa fa-sign-in',
 } as IButton

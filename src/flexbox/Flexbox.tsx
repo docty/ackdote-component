@@ -1,31 +1,33 @@
 import React, { CSSProperties } from 'react';
 import { HTMLAttributes } from 'react';
-
+import classnames from 'classnames';
 
 export const Flexbox = (props: IFlexbox) => {
-    const  allStyle: CSSProperties = {
-        display: 'flex',
-        flexWrap: 'wrap',
-        flexDirection: props.direction,
-        alignContent: props.alignContent,
-        alignItems: props.alignItems,
-        padding:'5px',
-        ...props.style
-    };
+    
     return (
-        <div style={allStyle}>
+        <div style={props.style} className={styling(props)}>
             {props.children}
         </div>
-    );
-      
+    ); 
+       
 };
 
+const styling = (props:IFlexbox) => {
+    const { direction, justifyContent, alignItems, alignContent } = props;
+    return classnames([
+        'flex flex-wrap',
+        `flex-${direction}`,
+        `justify-${justifyContent}`,
+        `items-${alignItems}`,
+        `content-${alignContent}`,
+    ])
+}
  
 export interface IFlexbox extends Pick<HTMLAttributes<React.ReactNode>, 'children'> {
-    direction?: 'row' | 'column';
-    alignContent?: 'center' | 'flex-start' | 'flex-end' | 'stretch' | 'space-around' | 'space-between';
-    justifyContent?: 'center' | 'flex-start' | 'flex-end' | 'space-evenly' | 'space-around' | 'space-between';
-    alignItems?: 'center' | 'flex-start' | 'flex-end' | 'stretch' | 'baseline';
+    direction?: 'row' | 'col';
+    alignContent?: 'center' | 'start' | 'end' | 'stretch' | 'around' | 'between';
+    justifyContent?: 'center' | 'start' | 'end' | 'evenly' | 'around' | 'between';
+    alignItems?: 'center' | 'start' | 'end' | 'stretch' | 'baseline';
     style?: CSSProperties;
     
 }

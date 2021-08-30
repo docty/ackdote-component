@@ -1,5 +1,5 @@
-import React, { CSSProperties } from 'react';
-
+import  { CSSProperties } from 'react';
+import '../index.css'
 
 export const Checkbox = (props: ICheckbox) => { 
     const {style, text, click} = props;

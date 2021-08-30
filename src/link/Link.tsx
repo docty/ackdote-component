@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react';
+import { CSSProperties } from 'react';
 
 
 export const Link = (props: Pick<ILink, 'text' | 'href' | 'style'>) => {

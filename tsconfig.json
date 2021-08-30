@@ -1,31 +1,48 @@
 {
   "compilerOptions": {
-      "outDir": "./dist/cjs/",
-      "lib": ["dom", "dom.iterable", "esnext"],
-      "target": "es5",
-      "module": "commonjs",
-      "skipLibCheck": true,
-      "noImplicitAny": true,
-      "noUnusedLocals": true,
-      "noUnusedParameters": true,
-      "noEmitOnError": true,
-      "strictNullChecks": true,
-      "alwaysStrict": true,
-      "traceResolution": false,
-      "forceConsistentCasingInFileNames": true,
-      "noImplicitReturns": true,
-      "moduleResolution": "node",
-      "resolveJsonModule": true,
-      "strict": true,
-      "sourceMap": true,
-      "esModuleInterop": true,
-      "jsx": "react",
-      "typeRoots": ["index.d.ts", "node_modules/@types"],
-      "baseUrl": "src",
-      "paths": {
-          "*": ["src/types/*"]
-      }
+    "outDir": "./dist/cjs/",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "target": "es5",
+    "module": "esnext",
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noEmitOnError": true,
+    "strictNullChecks": true,
+    "alwaysStrict": true,
+    "traceResolution": false,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "strict": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "typeRoots": [
+      "index.d.ts",
+      "node_modules/@types"
+    ],
+    "baseUrl": "src",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "isolatedModules": true,
+    "noEmit": true
   },
-  "include": ["./src/**/*", "src/types"],
-  "exclude": ["node_modules", "dist", "./src/**/*.test.ts*", "./src/stories"]
+  "include": [
+    "./src/**/*",
+    "src/types"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "./src/**/*.test.ts*",
+    "./src/stories"
+  ]
 }

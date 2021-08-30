@@ -1,6 +1,6 @@
 {
-  "name": "@docty68/component",
-  "version": "0.1.7",
+  "name": "@docty68/widget",
+  "version": "0.1.0",
   "description": "Docty68 package is a holder for all react packages",
   "author": "docty68 <createdarko@gmail.com> (http://doctycomponent.com)",
   "license": "MIT",
@@ -14,6 +14,8 @@
     "dist/**/*"
   ],
   "dependencies": {
+    "@craco/craco": "^6.2.0",
+    "@tailwindcss/postcss7-compat": "^2.2.8",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -21,19 +23,16 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
-    "jspdf": "^2.2.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.1",
-    "sass": "^1.34.1",
-    "styled-components": "^5.2.1",
+    "autoprefixer": "^9.8.6",
+    "classnames": "^2.3.1",
+    "postcss": "^7.0.36",
     "typescript": "^4.0.3",
-    "web-vitals": "^0.2.4"
+    "typestyle": "^2.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
@@ -67,7 +66,12 @@
     "@storybook/node-logger": "^6.1.10",
     "@storybook/preset-create-react-app": "^3.1.5",
     "@storybook/react": "^6.1.10",
-    "chromatic": "^5.9.2"
+    "chromatic": "^5.9.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^4.0.1",
+    "sass": "^1.38.2",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.8"
   },
   "keywords": [
     "ackdote",

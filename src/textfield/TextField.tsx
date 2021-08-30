@@ -1,7 +1,7 @@
-import React, { CSSProperties } from 'react';
+import { CSSProperties } from 'react';
 import './textfield.css';
 
-
+ 
 export const TextField = (props: ITextField) => {
     const {type, placeholder, style, icon,change, value} = props
     
