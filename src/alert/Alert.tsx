@@ -1,4 +1,5 @@
 import React, { CSSProperties, HTMLAttributes } from 'react';
+import classnames from 'classnames';
 import './alert.css';
 
 
@@ -10,7 +11,7 @@ export const Alert = (props: IAlert) => {
     }
 
     return (
-        <div id={'dt-alert-id'}  className={'dt-alert'} style={props.style}>
+        <div id={'dt-alert-id'}  className={classnames(['dt-alert', props.className])} style={props.style}>
             {props.children}
             <span onClick={() => onCloseBtn()} className={'fa fa-close'}></span>
         </div>
@@ -20,6 +21,6 @@ export const Alert = (props: IAlert) => {
 
  
 
-export interface IAlert extends Pick<HTMLAttributes<React.ReactNode>, 'children'> {
+export interface IAlert extends Pick<HTMLAttributes<React.ReactNode>, 'children' | 'className'> {
     style?: CSSProperties;
 }

@@ -9,13 +9,10 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import React from 'react';
+import { jsxs as _jsxs, jsx as _jsx } from "react/jsx-runtime";
 import './progressbar.css';
 export var Progressbar = function (props) {
     var allStyle = __assign({ width: props.width + "%" }, props.style);
-    return (React.createElement("div", { className: 'dt-progressbar' },
-        React.createElement("div", { style: allStyle, className: 'dt-progressbar-inner' },
-            props.width,
-            "%")));
+    return (_jsx("div", __assign({ className: 'dt-progressbar' }, { children: _jsxs("div", __assign({ style: allStyle, className: 'dt-progressbar-inner' }, { children: [props.width, "%"] }), void 0) }), void 0));
 };
 //# sourceMappingURL=Progressbar.js.map

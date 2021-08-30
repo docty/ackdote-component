@@ -1,49 +1,35 @@
-"use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.TabItem = exports.Tab = void 0;
-var react_1 = __importStar(require("react"));
-require("./tab.css");
-var Tab = function (props) {
-    var itemHead = react_1.Children.toArray(props.children);
-    var _a = react_1.default.useState(0), state = _a[0], setState = _a[1];
-    return (react_1.default.createElement("div", null,
-        react_1.default.createElement("div", { className: 'dt-tab-head' }, itemHead.map(function (i, index) {
-            return react_1.default.createElement(TabHeader, { text: i.props.text, icon: i.props.icon, clickTab: function () { return setState(index); }, childIndex: index, selectedIndex: state });
-        })),
-        react_1.default.createElement(TabContent, null, itemHead[state])));
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import React, { Children } from 'react';
+import './tab.css';
+export var Tab = function (props) {
+    var itemHead = Children.toArray(props.children);
+    var _a = React.useState(0), state = _a[0], setState = _a[1];
+    return (_jsxs("div", { children: [_jsx("div", __assign({ className: 'dt-tab-head' }, { children: itemHead.map(function (i, index) {
+                    return _jsx(TabHeader, { text: i.props.text, icon: i.props.icon, clickTab: function () { return setState(index); }, childIndex: index, selectedIndex: state }, void 0);
+                }) }), void 0),
+            _jsx(TabContent, { children: itemHead[state] }, void 0)] }, void 0));
 };
-exports.Tab = Tab;
-var TabItem = function (props) {
-    return react_1.default.createElement("div", null, props.children);
+export var TabItem = function (props) {
+    return _jsx("div", { children: props.children }, void 0);
 };
-exports.TabItem = TabItem;
 var TabHeader = function (_a) {
     var text = _a.text, icon = _a.icon, clickTab = _a.clickTab, childIndex = _a.childIndex, selectedIndex = _a.selectedIndex, style = _a.style;
     var styleName = childIndex === selectedIndex ? 'dt-tab-header-active' : '';
-    return (react_1.default.createElement("div", { className: [styleName, 'dt-tab-header'].join(' '), style: style, onClick: clickTab },
-        react_1.default.createElement("span", { style: { marginRight: '5px' } }, text),
-        icon && (react_1.default.createElement("i", { className: icon }))));
+    return (_jsxs("div", __assign({ className: [styleName, 'dt-tab-header'].join(' '), style: style, onClick: clickTab }, { children: [_jsx("span", __assign({ style: { marginRight: '5px' } }, { children: text }), void 0),
+            icon && (_jsx("i", { className: icon }, void 0))] }), void 0));
 };
 var TabContent = function (props) {
-    return (react_1.default.createElement("div", { className: 'dt-tab-content', style: props.style }, props.children));
+    return (_jsx("div", __assign({ className: 'dt-tab-content', style: props.style }, { children: props.children }), void 0));
 };
 //# sourceMappingURL=Tab.js.map

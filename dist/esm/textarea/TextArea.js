@@ -1,6 +1,6 @@
-import React from 'react';
+import { jsx as _jsx } from "react/jsx-runtime";
 export var TextArea = function (props) {
     var change = props.change, style = props.style;
-    return (React.createElement("textarea", { style: style, onChange: change }));
+    return (_jsx("textarea", { style: style, onChange: change }, void 0));
 };
 //# sourceMappingURL=TextArea.js.map

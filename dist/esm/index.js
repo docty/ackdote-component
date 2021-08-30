@@ -20,4 +20,6 @@ export { Dropdown } from './dropdown/Dropdown';
 export { Progressbar } from './progressbar/Progressbar';
 export { Spinner } from './spinner/Spinner';
 export { Tab } from './tab/Tab';
+export { Container } from './container/Container';
+export { Column } from './column/Column';
 //# sourceMappingURL=index.js.map

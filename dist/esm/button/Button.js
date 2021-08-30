@@ -9,16 +9,22 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import React from 'react';
-import './button.css';
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import '../font-awesome.min.css';
+import classnames from 'classnames';
 export var Button = function (props) {
-    var text = props.text, fullWidth = props.fullWidth, style = props.style, icon = props.icon, trailing = props.trailing, click = props.click;
-    var length = fullWidth ? '100%' : 'auto';
-    var direction = trailing === 'left' ? 'row' : 'row-reverse';
-    var cssProp = __assign(__assign({}, style), { width: length, flexDirection: direction });
-    return (React.createElement("button", { type: "button", style: cssProp, className: 'btn', onClick: click },
-        icon && (React.createElement("i", { className: icon, style: { margin: '5px' } })),
-        React.createElement("span", null, text)));
+    return (_jsxs("button", __assign({ type: "button", style: { color: '#fff' }, className: styling(props), onClick: props.click }, { children: [props.icon && (_jsx("i", { className: props.icon, style: { margin: '5px' } }, void 0)),
+            _jsx("span", { children: props.text }, void 0)] }), void 0));
+};
+var styling = function (props) {
+    var bgColor = props.bgColor;
+    return classnames([
+        "bg-" + bgColor + "-400",
+        'p-2 px-5 rounded-xl',
+        "hover:bg-" + bgColor + "-300"
+    ]);
+};
+Button.defaultProps = {
+    bgColor: 'blue'
 };
 //# sourceMappingURL=Button.js.map

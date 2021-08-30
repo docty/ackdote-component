@@ -20,10 +20,11 @@ const styling = (props:IFlexbox) => {
         `justify-${justifyContent}`,
         `items-${alignItems}`,
         `content-${alignContent}`,
+        props.className
     ])
 }
  
-export interface IFlexbox extends Pick<HTMLAttributes<React.ReactNode>, 'children'> {
+export interface IFlexbox extends Pick<HTMLAttributes<React.ReactNode>, 'children' | 'className'> {
     direction?: 'row' | 'col';
     alignContent?: 'center' | 'start' | 'end' | 'stretch' | 'around' | 'between';
     justifyContent?: 'center' | 'start' | 'end' | 'evenly' | 'around' | 'between';

@@ -1,4 +1,3 @@
-"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -10,15 +9,19 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
+import { jsx as _jsx } from "react/jsx-runtime";
+import classnames from 'classnames';
+export var Flexbox = function (props) {
+    return (_jsx("div", __assign({ style: props.style, className: styling(props) }, { children: props.children }), void 0));
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Flexbox = void 0;
-var react_1 = __importDefault(require("react"));
-var Flexbox = function (props) {
-    var allStyle = __assign({ display: 'flex', flexWrap: 'wrap', flexDirection: props.direction, alignContent: props.alignContent, alignItems: props.alignItems, padding: '5px' }, props.style);
-    return (react_1.default.createElement("div", { style: allStyle }, props.children));
+var styling = function (props) {
+    var direction = props.direction, justifyContent = props.justifyContent, alignItems = props.alignItems, alignContent = props.alignContent;
+    return classnames([
+        'flex flex-wrap',
+        "flex-" + direction,
+        "justify-" + justifyContent,
+        "items-" + alignItems,
+        "content-" + alignContent,
+    ]);
 };
-exports.Flexbox = Flexbox;
 //# sourceMappingURL=Flexbox.js.map

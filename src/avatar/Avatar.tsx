@@ -1,4 +1,5 @@
-import { CSSProperties } from 'react';
+import { CSSProperties, HTMLAttributes } from 'react';
+import classnames from 'classnames';
 import './avatar.css';
 
 export const Avatar = (props: IAvatar) => { 
@@ -8,14 +9,14 @@ export const Avatar = (props: IAvatar) => {
         height: `${props.size}px`
     } as CSSProperties;
     return (
-        <div style={allStyle} className={'dt-avatar'}>
+        <div style={allStyle} className={classnames(['dt-avatar', props.className])}>
             {props.text && <p>{props.text}</p>}
             {props.icon && <img src={props.icon} alt={'No Icon'} />}
         </div>
     )
 };
 
-export interface IAvatar  {
+export interface IAvatar  extends Pick<HTMLAttributes<React.ReactNode>, 'children' | 'className'> {
     style?: CSSProperties;
     size?: number;
     icon?: string;

@@ -1,9 +1,10 @@
-import { CSSProperties } from 'react';
+import classnames from 'classnames';
+import { CSSProperties, HTMLAttributes } from 'react';
 import './textfield.css';
 
  
 export const TextField = (props: ITextField) => {
-    const {type, placeholder, style, icon,change, value} = props
+    const {type, placeholder, style, icon,change, value, className} = props
     
     
     return (
@@ -16,7 +17,7 @@ export const TextField = (props: ITextField) => {
             }
             <input 
                 type={type}
-                className={"dt-input"}
+                className={classnames(["dt-input", className])}
                 placeholder={placeholder}
                 onChange={change}
                 value={value}
@@ -26,7 +27,7 @@ export const TextField = (props: ITextField) => {
 };
 
 
-export interface ITextField {
+export interface ITextField extends Pick<HTMLAttributes<React.ReactNode>, 'children' | 'className'> {
     type: 'text' | 'password';
     placeholder?: string;
     change?: (e:any) => void;

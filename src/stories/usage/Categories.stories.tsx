@@ -4,7 +4,7 @@ import { Meta, Story  } from '@storybook/react/types-6-0';
 import {Flexbox} from '../../flexbox/Flexbox'
 import { Column, Container, Image } from '../../index' 
 import { style } from 'typestyle';
- 
+  
 export default {
     title: 'Usage/Categories',
     component: Flexbox

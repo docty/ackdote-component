@@ -17,12 +17,13 @@ const styling = (props: IColumn) => {
     return classnames([
         lg && `lg:w-${lg}/12`,
         md && `md:w-${md}/12`,
-        sm && `sm:w-${sm}/12`
+        sm && `sm:w-${sm}/12`,
+        props.className
     ])
 }
 
 
-export interface IColumn extends  Pick<HTMLAttributes<React.ReactNode>, 'children' | 'style'> {
+export interface IColumn extends  Pick<HTMLAttributes<React.ReactNode>, 'children' | 'style' | 'className'> {
     lg?: '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12';
     md?: '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12';
     sm?: '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12';

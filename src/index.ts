@@ -1,4 +1,3 @@
-import './index.css';
 export { Heading } from "./heading/Heading";
 export { Button } from "./button/Button";
 export { Paragraph } from "./paragraph/Paragraph";
@@ -11,7 +10,7 @@ export { Radio } from "./radio/Radio";
 export { Option, OptionItem } from './option/Option';
 export { List, ListItem } from "./list/List";
 export { Table, TableRow, TableHeader, TableItem } from "./table/Table";
- 
+  
 export { Accordion } from './accordion/Accordion';
 export { Alert } from './alert/Alert';
 export { Avatar } from './avatar/Avatar';

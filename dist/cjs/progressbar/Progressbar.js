@@ -1,4 +1,3 @@
-"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -10,19 +9,10 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Progressbar = void 0;
-var react_1 = __importDefault(require("react"));
-require("./progressbar.css");
-var Progressbar = function (props) {
+import { jsxs as _jsxs, jsx as _jsx } from "react/jsx-runtime";
+import './progressbar.css';
+export var Progressbar = function (props) {
     var allStyle = __assign({ width: props.width + "%" }, props.style);
-    return (react_1.default.createElement("div", { className: 'dt-progressbar' },
-        react_1.default.createElement("div", { style: allStyle, className: 'dt-progressbar-inner' },
-            props.width,
-            "%")));
+    return (_jsx("div", __assign({ className: 'dt-progressbar' }, { children: _jsxs("div", __assign({ style: allStyle, className: 'dt-progressbar-inner' }, { children: [props.width, "%"] }), void 0) }), void 0));
 };
-exports.Progressbar = Progressbar;
 //# sourceMappingURL=Progressbar.js.map

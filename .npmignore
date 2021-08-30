@@ -2,3 +2,4 @@ src
 public
 .storybook
 storybook-static
+tsconfigs.json

@@ -9,9 +9,19 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import React from 'react';
+import { jsx as _jsx } from "react/jsx-runtime";
+import classnames from 'classnames';
 export var Flexbox = function (props) {
-    var allStyle = __assign({ display: 'flex', flexWrap: 'wrap', flexDirection: props.direction, alignContent: props.alignContent, alignItems: props.alignItems, padding: '5px' }, props.style);
-    return (React.createElement("div", { style: allStyle }, props.children));
+    return (_jsx("div", __assign({ style: props.style, className: styling(props) }, { children: props.children }), void 0));
+};
+var styling = function (props) {
+    var direction = props.direction, justifyContent = props.justifyContent, alignItems = props.alignItems, alignContent = props.alignContent;
+    return classnames([
+        'flex flex-wrap',
+        "flex-" + direction,
+        "justify-" + justifyContent,
+        "items-" + alignItems,
+        "content-" + alignContent,
+    ]);
 };
 //# sourceMappingURL=Flexbox.js.map
