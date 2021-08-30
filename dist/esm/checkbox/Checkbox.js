@@ -11,9 +11,10 @@ var __assign = (this && this.__assign) || function () {
 };
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import '../index.css';
+import classnames from 'classnames';
 export var Checkbox = function (props) {
     var style = props.style, text = props.text, click = props.click;
-    return (_jsxs("div", __assign({ style: style }, { children: [_jsx("input", { type: "checkbox", onClick: click }, void 0),
+    return (_jsxs("div", __assign({ style: style, className: classnames(props.className) }, { children: [_jsx("input", { type: "checkbox", onClick: click }, void 0),
             _jsx("label", { children: text }, void 0)] }), void 0));
 };
 //# sourceMappingURL=Checkbox.js.map

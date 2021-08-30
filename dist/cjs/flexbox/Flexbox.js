@@ -22,6 +22,7 @@ var styling = function (props) {
         "justify-" + justifyContent,
         "items-" + alignItems,
         "content-" + alignContent,
+        props.className
     ]);
 };
 //# sourceMappingURL=Flexbox.js.map

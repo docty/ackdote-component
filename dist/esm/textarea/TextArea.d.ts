@@ -1,6 +1,6 @@
-import { CSSProperties } from 'react';
-export declare const TextArea: (props: Pick<ITextArea, 'change' | 'style'>) => JSX.Element;
-export interface ITextArea {
+import { CSSProperties, HTMLAttributes } from 'react';
+export declare const TextArea: (props: ITextArea) => JSX.Element;
+export interface ITextArea extends Pick<HTMLAttributes<React.ReactNode>, 'children' | 'className'> {
     change?: () => void;
     style?: CSSProperties;
 }

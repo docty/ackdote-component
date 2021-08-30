@@ -10,8 +10,9 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 import { jsx as _jsx } from "react/jsx-runtime";
+import classnames from 'classnames';
 export var Link = function (props) {
-    var text = props.text, href = props.href, style = props.style;
-    return (_jsx("a", __assign({ href: href, style: style }, { children: text }), void 0));
+    var text = props.text, href = props.href, style = props.style, className = props.className;
+    return (_jsx("a", __assign({ href: href, style: style, className: classnames(className) }, { children: text }), void 0));
 };
 //# sourceMappingURL=Link.js.map

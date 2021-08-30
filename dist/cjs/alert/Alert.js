@@ -10,12 +10,13 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import classnames from 'classnames';
 import './alert.css';
 export var Alert = function (props) {
     var onCloseBtn = function () {
         var dd = document.getElementById('dt-alert-id');
         dd.style.display = 'none';
     };
-    return (_jsxs("div", __assign({ id: 'dt-alert-id', className: 'dt-alert', style: props.style }, { children: [props.children, _jsx("span", { onClick: function () { return onCloseBtn(); }, className: 'fa fa-close' }, void 0)] }), void 0));
+    return (_jsxs("div", __assign({ id: 'dt-alert-id', className: classnames(['dt-alert', props.className]), style: props.style }, { children: [props.children, _jsx("span", { onClick: function () { return onCloseBtn(); }, className: 'fa fa-close' }, void 0)] }), void 0));
 };
 //# sourceMappingURL=Alert.js.map

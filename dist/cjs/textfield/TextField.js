@@ -10,11 +10,12 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import classnames from 'classnames';
 import './textfield.css';
 export var TextField = function (props) {
-    var type = props.type, placeholder = props.placeholder, style = props.style, icon = props.icon, change = props.change, value = props.value;
+    var type = props.type, placeholder = props.placeholder, style = props.style, icon = props.icon, change = props.change, value = props.value, className = props.className;
     return (_jsxs("div", __assign({ style: style, className: 'dt-input-wrapper' }, { children: [icon &&
                 _jsx("span", __assign({ className: 'dt-input-icon' }, { children: _jsx("i", { className: icon }, void 0) }), void 0),
-            _jsx("input", { type: type, className: "dt-input", placeholder: placeholder, onChange: change, value: value }, void 0)] }), void 0));
+            _jsx("input", { type: type, className: classnames(["dt-input", className]), placeholder: placeholder, onChange: change, value: value }, void 0)] }), void 0));
 };
 //# sourceMappingURL=TextField.js.map

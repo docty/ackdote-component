@@ -21,7 +21,8 @@ var styling = function (props) {
     return classnames([
         "bg-" + bgColor + "-400",
         'p-2 px-5 rounded-xl',
-        "hover:bg-" + bgColor + "-300"
+        "hover:bg-" + bgColor + "-300",
+        props.className
     ]);
 };
 Button.defaultProps = {

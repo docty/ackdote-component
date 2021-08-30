@@ -10,8 +10,9 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 import { jsx as _jsx } from "react/jsx-runtime";
+import classnames from 'classnames';
 export var Paragraph = function (props) {
-    var text = props.text, style = props.style;
-    return (_jsx("p", __assign({ style: style }, { children: text }), void 0));
+    var text = props.text, style = props.style, className = props.className;
+    return (_jsx("p", __assign({ style: style, className: classnames(className) }, { children: text }), void 0));
 };
 //# sourceMappingURL=Paragraph.js.map

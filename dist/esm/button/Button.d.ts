@@ -1,12 +1,12 @@
 import '../font-awesome.min.css';
-import { CSSProperties } from 'react';
+import { CSSProperties, HTMLAttributes } from 'react';
 export declare const Button: {
     (props: IButton): JSX.Element;
     defaultProps: {
         bgColor: string;
     };
 };
-export interface IButton {
+export interface IButton extends Pick<HTMLAttributes<React.ReactNode>, 'children' | 'className'> {
     bgColor?: 'blue' | 'green' | 'pink' | 'red';
     text: string;
     fullWidth?: boolean;

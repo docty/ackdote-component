@@ -1,6 +1,6 @@
 {
   "name": "@docty68/widget",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Docty68 package is a holder for all react packages",
   "author": "docty68 <createdarko@gmail.com> (https://doctywidget.com)",
   "license": "MIT",
@@ -38,7 +38,8 @@
     "build-storybook": "build-storybook -s public",
     "copy": "sass src:dist/esm -I node_modules --no-source-map",
     "precompile": "npm run copy && tsc",
-    "compile": "tsc -p tsconfig.build.json"
+    "compile": "tsc -p tsconfig.build.json",
+    "postcompile" : "copyfiles --flat src/fonts/*  dist/esm/fonts"
   },
   "eslintConfig": {
     "extends": [
@@ -67,6 +68,7 @@
     "@storybook/preset-create-react-app": "^3.1.5",
     "@storybook/react": "^6.1.10",
     "chromatic": "^5.9.2",
+    "copyfiles": "^2.4.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "^4.0.1",
