@@ -1,21 +1,28 @@
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { jsx as _jsx } from "react/jsx-runtime";
 import classnames from 'classnames';
-import './textfield.css';
+import { style } from 'typestyle';
 export var TextField = function (props) {
-    var type = props.type, placeholder = props.placeholder, style = props.style, icon = props.icon, change = props.change, value = props.value, className = props.className;
-    return (_jsxs("div", __assign({ style: style, className: 'dt-input-wrapper' }, { children: [icon &&
-                _jsx("span", __assign({ className: 'dt-input-icon' }, { children: _jsx("i", { className: icon }, void 0) }), void 0),
-            _jsx("input", { type: type, className: classnames(["dt-input", className]), placeholder: placeholder, onChange: change, value: value }, void 0)] }), void 0));
+    var type = props.type, placeholder = props.placeholder, style = props.style, onValueChange = props.onValueChange, value = props.value, className = props.className;
+    return (_jsx("input", { type: type, className: classnames([inputStyling, className]), placeholder: placeholder, onChange: onValueChange, value: value, style: style }, void 0));
 };
+var inputStyling = style({
+    background: "#f4f5f9",
+    border: "2px solid #f4f5f9",
+    fontSize: "0.85em",
+    color: "#4f5d77",
+    paddingLeft: "20px",
+    borderRadius: "4px",
+    height: "45px",
+    padding: "0.5rem 0.75rem",
+    width: "100%",
+    appearance: "none",
+    marginBottom: "0.75rem",
+    $nest: {
+        "&:focus": {
+            background: "#fff",
+            outline: "none",
+            border: "2px solid #f4f5f9",
+        },
+    },
+});
 //# sourceMappingURL=TextField.js.map

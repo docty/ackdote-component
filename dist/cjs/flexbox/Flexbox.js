@@ -18,10 +18,10 @@ var styling = function (props) {
     var direction = props.direction, justifyContent = props.justifyContent, alignItems = props.alignItems, alignContent = props.alignContent;
     return classnames([
         'flex flex-wrap',
-        "flex-" + direction,
-        "justify-" + justifyContent,
-        "items-" + alignItems,
-        "content-" + alignContent,
+        direction && "flex-" + direction,
+        justifyContent && "justify-" + justifyContent,
+        alignItems && "items-" + alignItems,
+        alignContent && "content-" + alignContent,
         props.className
     ]);
 };

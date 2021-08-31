@@ -1,5 +1,6 @@
 import '../font-awesome.min.css';
 import classnames from 'classnames';
+import { style  } from 'typestyle';
 import { CSSProperties, HTMLAttributes } from 'react';
 
 export const Button = (props: IButton) => {
@@ -9,7 +10,7 @@ export const Button = (props: IButton) => {
     return (
         <button 
             type="button" 
-            style={{color: '#fff'}}
+            style={props.style}
             className={styling(props)}
             onClick={props.click}
         >
@@ -25,11 +26,12 @@ const styling = (props: IButton) => {
         `bg-${bgColor}-400`, 
         'p-2 px-5 rounded-xl', 
         `hover:bg-${bgColor}-300`,
+        style({color: '#fff'}),
         props.className
     ]);
 } 
 
-
+ 
 export interface IButton extends Pick<HTMLAttributes<React.ReactNode>, 'children' | 'className'> {
     bgColor?: 'blue' | 'green' | 'pink' | 'red',
     text: string;

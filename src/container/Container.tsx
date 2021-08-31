@@ -18,8 +18,8 @@ const styling = (props: IContainer) => {
     return classnames([
         'container',
         'p-1',
-        `${radius && 'rounded-xl'}`,
-        `${position && position}`,
+        radius && 'rounded-xl',
+        position && position,
         props.className
     ])
 }

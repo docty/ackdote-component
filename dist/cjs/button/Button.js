@@ -12,8 +12,9 @@ var __assign = (this && this.__assign) || function () {
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import '../font-awesome.min.css';
 import classnames from 'classnames';
+import { style } from 'typestyle';
 export var Button = function (props) {
-    return (_jsxs("button", __assign({ type: "button", style: { color: '#fff' }, className: styling(props), onClick: props.click }, { children: [props.icon && (_jsx("i", { className: props.icon, style: { margin: '5px' } }, void 0)),
+    return (_jsxs("button", __assign({ type: "button", style: props.style, className: styling(props), onClick: props.click }, { children: [props.icon && (_jsx("i", { className: props.icon, style: { margin: '5px' } }, void 0)),
             _jsx("span", { children: props.text }, void 0)] }), void 0));
 };
 var styling = function (props) {
@@ -22,6 +23,7 @@ var styling = function (props) {
         "bg-" + bgColor + "-400",
         'p-2 px-5 rounded-xl',
         "hover:bg-" + bgColor + "-300",
+        style({ color: '#fff' }),
         props.className
     ]);
 };

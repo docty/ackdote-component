@@ -23,3 +23,5 @@ export { Spinner } from './spinner/Spinner';
 export { Tab } from './tab/Tab';
 export { Container } from './container/Container';
 export { Column } from './column/Column'; 
+export { Cage } from './cage/Cage'; 
+export { Menu, MenuItem, MenuSub } from './menu/Menu';

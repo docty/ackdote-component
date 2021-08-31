@@ -1,6 +1,6 @@
 import React, { CSSProperties } from 'react';
 import { HTMLAttributes } from 'react';
-
+import classnames from 'classnames';
 
 
 export const List = (props: IList) => {
@@ -11,19 +11,23 @@ export const List = (props: IList) => {
         );
     } else {
         return (
-            <ul style={props.style}>{props.children}</ul>
+            <ul style={props.style} className={classnames(props.className)}>{props.children}</ul>
         );
     } 
 };
 
 
-export const ListItem = (props: Pick<HTMLAttributes<React.ReactNode>, 'children' | 'style'>) => {
+export const ListItem = (props: IListItem) => {
     return (
-        <li style={props.style}>{props.children}</li>
+        <li style={props.style} className={classnames(props.className)}>{props.children}</li>
     );
 };
 
-export interface IList extends Pick<HTMLAttributes<React.ReactNode>, 'children'> {
+export interface IList extends Pick<HTMLAttributes<React.ReactNode>, 'children' | 'className'> {
     type: 'ordered' | 'unordered';
     style?: CSSProperties;
+}
+
+export  interface IListItem  extends Pick<HTMLAttributes<React.ReactNode>, 'children' | 'style' | 'className'> {
+
 }

@@ -16,10 +16,10 @@ const styling = (props:IFlexbox) => {
     const { direction, justifyContent, alignItems, alignContent } = props;
     return classnames([
         'flex flex-wrap',
-        `flex-${direction}`,
-        `justify-${justifyContent}`,
-        `items-${alignItems}`,
-        `content-${alignContent}`,
+        direction && `flex-${direction}`,
+        justifyContent && `justify-${justifyContent}`,
+        alignItems && `items-${alignItems}`,
+        alignContent && `content-${alignContent}`,
         props.className
     ])
 }

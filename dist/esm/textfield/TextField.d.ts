@@ -1,11 +1,9 @@
-import { CSSProperties, HTMLAttributes } from 'react';
-import './textfield.css';
+import { ChangeEventHandler, CSSProperties, HTMLAttributes } from 'react';
 export declare const TextField: (props: ITextField) => JSX.Element;
 export interface ITextField extends Pick<HTMLAttributes<React.ReactNode>, 'children' | 'className'> {
-    type: 'text' | 'password';
+    type?: 'text' | 'email' | 'tel' | 'number' | 'password';
     placeholder?: string;
-    change?: (e: any) => void;
+    onValueChange: ChangeEventHandler<HTMLInputElement>;
     style?: CSSProperties;
-    icon?: string;
     value?: string;
 }
