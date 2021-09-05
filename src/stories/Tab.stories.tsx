@@ -12,7 +12,7 @@ export default {
 
 
 const Template: Story<ITab>  = (args) => 
-    <Tab  {...args}>
+    <Tab  {...args} direction={'row'}>
         <TabItem icon={'fa fa-user'}>
             <Paragraph text={'This is the content for the home'}/>
         </TabItem>
@@ -24,5 +24,20 @@ const Template: Story<ITab>  = (args) =>
         </TabItem>
     </Tab>;
 
-export const TabDefault = Template.bind({});
+export const Horizontal = Template.bind({});
+
+const Template1: Story<ITab>  = (args) => 
+    <Tab  {...args} direction={'col'}>
+        <TabItem icon={'fa fa-user'}>
+            <Paragraph text={'This is the content for the home'}/>
+        </TabItem>
+        <TabItem text={'Contact'} >
+            <Paragraph text={'This is the content for the contact'}/>
+        </TabItem>
+        <TabItem text={'Service'} icon={'fa fa-users'} >
+            <Paragraph text={'This is the content for the service'}/>
+        </TabItem>
+    </Tab>;
+
+export const Vertical = Template1.bind({});
  

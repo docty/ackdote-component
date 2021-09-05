@@ -17,7 +17,11 @@ const Template: Story<any>  = (args) =>
                 <MenuSub text={'Add'} url={'#add'}/>
                 <MenuSub text={'List'} url={'#list'}/>
             </MenuItem>
-            <MenuItem text={'Project'} url={'#project'} icon={'fa fa-up'} className={menuItem}/>
+            <MenuItem text={'Project'} url={'#project'} icon={'fa fa-edit'} className={menuItem}/>
+            <MenuItem text={'Staff'} url={'#'} icon={'fa fa-home'} className={menuItem} hasSub>
+                <MenuSub text={'Add'} url={'#add'}/>
+                <MenuSub text={'List'} url={'#list'}/>
+            </MenuItem>
         </Menu>
     </Cage>
 

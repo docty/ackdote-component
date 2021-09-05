@@ -6,4 +6,5 @@ export interface IImage extends Pick<HTMLAttributes<React.ReactNode>, 'children'
     width?: string;
     height?: string;
     style?: CSSProperties;
+    circle?: boolean;
 }

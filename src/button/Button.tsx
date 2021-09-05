@@ -14,7 +14,7 @@ export const Button = (props: IButton) => {
             className={styling(props)}
             onClick={props.click}
         >
-            {props.icon &&  (<i className={props.icon} style={{margin: '5px'}}></i>) }
+            {props.icon &&  (<i className={props.icon}></i>) }
             <span>{props.text}</span>
         </button>
         
@@ -24,9 +24,8 @@ const styling = (props: IButton) => {
     const { bgColor } = props;
     return classnames([
         `bg-${bgColor}-400`, 
-        'p-2 px-5 rounded-xl', 
         `hover:bg-${bgColor}-300`,
-        style({color: '#fff'}),
+        style({color: '#fff', padding: '0.1rem 0.25rem', borderRadius: '5px'}),
         props.className
     ]);
 } 
@@ -34,7 +33,7 @@ const styling = (props: IButton) => {
  
 export interface IButton extends Pick<HTMLAttributes<React.ReactNode>, 'children' | 'className'> {
     bgColor?: 'blue' | 'green' | 'pink' | 'red',
-    text: string;
+    text?: string;
     fullWidth?: boolean;
     click?: () => void;
     icon?: string;

@@ -1,7 +1,7 @@
 import React from 'react';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import { Meta, Story  } from '@storybook/react/types-6-0';
-import { IOption, Option, OptionItem } from '../option/Option';
+import { IOption, Option } from '../option/Option';
  
 
 export default {
@@ -10,11 +10,10 @@ export default {
 } as Meta;
 
 const Template: Story<IOption>  = (args) => 
-    <Option {...args}>
-        <OptionItem>Javascript</OptionItem>
-        <OptionItem>Python</OptionItem>
-        <OptionItem>CSS</OptionItem>
-    </Option>;
+    <Option {...args}/>
 
 export const OptionDefault = Template.bind({});
-
+OptionDefault.args = {
+    value: 'node',
+    item: ['node', 'admin']
+} as IOption;

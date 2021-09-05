@@ -10,12 +10,29 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 import { jsx as _jsx } from "react/jsx-runtime";
-import './option.css';
+import classnames from 'classnames';
+import { style } from 'typestyle';
 export var Option = function (props) {
-    return (_jsx("select", __assign({ className: 'dt-select', style: props.style }, { children: props.children }), void 0));
+    return (_jsx("select", __assign({ value: props.value, onChange: props.onValueChange, className: classnames([props.className, optionStyling]), style: props.style }, { children: props.item.map(function (res, index) { return (_jsx("option", __assign({ value: res.toLowerCase() }, { children: res }), index)); }) }), void 0));
 };
-export var OptionItem = function (props) {
-    var _a;
-    return _jsx("option", __assign({ value: (_a = props.children) === null || _a === void 0 ? void 0 : _a.toString(), style: props.style }, { children: props.children }), void 0);
-};
+var optionStyling = style({
+    border: '1px solid #cfdbe6',
+    appearance: 'revert',
+    background: "#f4f5f9",
+    fontSize: "0.85em",
+    color: "#4f5d77",
+    paddingLeft: "20px",
+    borderRadius: "4px",
+    height: "45px",
+    padding: "0.5rem 0.75rem",
+    width: "100%",
+    marginBottom: "0.75rem",
+    $nest: {
+        "&:focus": {
+            background: "#fff",
+            outline: "none",
+            border: "2px solid #f4f5f9",
+        },
+    },
+});
 //# sourceMappingURL=Option.js.map

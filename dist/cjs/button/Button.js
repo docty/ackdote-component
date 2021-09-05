@@ -14,16 +14,15 @@ import '../font-awesome.min.css';
 import classnames from 'classnames';
 import { style } from 'typestyle';
 export var Button = function (props) {
-    return (_jsxs("button", __assign({ type: "button", style: props.style, className: styling(props), onClick: props.click }, { children: [props.icon && (_jsx("i", { className: props.icon, style: { margin: '5px' } }, void 0)),
+    return (_jsxs("button", __assign({ type: "button", style: props.style, className: styling(props), onClick: props.click }, { children: [props.icon && (_jsx("i", { className: props.icon }, void 0)),
             _jsx("span", { children: props.text }, void 0)] }), void 0));
 };
 var styling = function (props) {
     var bgColor = props.bgColor;
     return classnames([
         "bg-" + bgColor + "-400",
-        'p-2 px-5 rounded-xl',
         "hover:bg-" + bgColor + "-300",
-        style({ color: '#fff' }),
+        style({ color: '#fff', padding: '0.1rem 0.25rem', borderRadius: '5px' }),
         props.className
     ]);
 };

@@ -1,7 +1,8 @@
 import { CSSProperties, HTMLAttributes, ReactNode } from 'react';
-import './option.css';
 export declare const Option: (props: IOption) => JSX.Element;
-export declare const OptionItem: (props: IOption) => JSX.Element;
-export interface IOption extends Pick<HTMLAttributes<ReactNode>, 'children'> {
+export interface IOption extends Pick<HTMLAttributes<ReactNode>, 'className'> {
     style?: CSSProperties;
+    value: string;
+    item: Array<string>;
+    onValueChange?: React.ChangeEventHandler<HTMLSelectElement>;
 }

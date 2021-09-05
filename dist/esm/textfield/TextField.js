@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import { style } from 'typestyle';
 export var TextField = function (props) {
     var type = props.type, placeholder = props.placeholder, style = props.style, onValueChange = props.onValueChange, value = props.value, className = props.className;
-    return (_jsx("input", { type: type, className: classnames([inputStyling, className]), placeholder: placeholder, onChange: onValueChange, value: value, style: style }, void 0));
+    return (_jsx("input", { type: type, className: classnames([className, inputStyling]), placeholder: placeholder, onChange: onValueChange, value: value, style: style }, void 0));
 };
 var inputStyling = style({
     background: "#f4f5f9",

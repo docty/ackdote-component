@@ -8,7 +8,7 @@ export declare const Button: {
 };
 export interface IButton extends Pick<HTMLAttributes<React.ReactNode>, 'children' | 'className'> {
     bgColor?: 'blue' | 'green' | 'pink' | 'red';
-    text: string;
+    text?: string;
     fullWidth?: boolean;
     click?: () => void;
     icon?: string;

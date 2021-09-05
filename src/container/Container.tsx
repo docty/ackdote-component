@@ -16,7 +16,6 @@ const styling = (props: IContainer) => {
     const { radius, position } = props;
 
     return classnames([
-        'container',
         'p-1',
         radius && 'rounded-xl',
         position && position,

@@ -8,7 +8,7 @@ export const TextField = (props: ITextField) => {
        
             <input 
                 type={type}
-                className={classnames([inputStyling, className])}
+                className={classnames([className, inputStyling])}
                 placeholder={placeholder}
                 onChange={onValueChange}
                 value={value}
@@ -41,7 +41,7 @@ const inputStyling = style({
 export interface ITextField extends Pick<HTMLAttributes<React.ReactNode>, 'children' | 'className'> {
     type?: 'text' | 'email' | 'tel' | 'number' | 'password';
     placeholder?: string;
-    onValueChange: ChangeEventHandler<HTMLInputElement>;
+    onValueChange?: ChangeEventHandler<HTMLInputElement>;
     style?: CSSProperties;
     value?: string;
 }
