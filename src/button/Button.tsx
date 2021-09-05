@@ -15,7 +15,7 @@ export const Button = (props: IButton) => {
             onClick={props.click}
         >
             {props.icon &&  (<i className={props.icon}></i>) }
-            <span>{props.text}</span>
+            {props.text && (<span className={'px-1'}>{props.text}</span>)}
         </button>
         
     );
@@ -25,7 +25,7 @@ const styling = (props: IButton) => {
     return classnames([
         `bg-${bgColor}-400`, 
         `hover:bg-${bgColor}-300`,
-        style({color: '#fff', padding: '0.1rem 0.25rem', borderRadius: '5px'}),
+        style({color: '#fff', padding: '0.1rem 0.35rem', borderRadius: '5px'}),
         props.className
     ]);
 } 

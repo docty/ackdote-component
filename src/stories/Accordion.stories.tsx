@@ -3,6 +3,7 @@ import React from 'react';
 import { Meta, Story  } from '@storybook/react/types-6-0';
 import { Accordion, AccordionItem, IAccordion } from '../accordion/Accordion';
 import { Paragraph } from '../paragraph/Paragraph'; 
+import '../widget.css';
 
 export default {
     title: 'Component/Accordion',
